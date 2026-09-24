@@ -32,15 +32,6 @@ Open `lab01/experiments.ipynb`, run all cells, and save the notebook so outputs 
 
 The notebook resolves the corpus relative to the project, loads at most 30,000 non-empty JSONL `text` fields and creates stable IDs `D00000`, `D00001`, and so on. The three official preprocessing pipelines are compared on the same corpus and, after manual qrels are entered, on the same evaluation queries.
 
-## Reproducibility and AI disclosure
-
-The notebook records the number of documents actually loaded, vectorizer settings, and metric formulas. AI was used to generate the initial project structure, explain APIs, diagnose a unit-test expectation error, and suggest code organization. The implementation was then inspected and verified with the Part E toy tests.
-
-**Allowed AI use under W1 Section 14:** documentation explanations, Python error diagnosis, warning/error explanations, visualization suggestions, code-optimization suggestions, and API comparisons.
-
-**Not delegated to AI:** Part B hand calculations before verification, Part C predictions, interpretation of numerical results, manually judged relevance labels, error analysis, reflection, Learning Check answers, and oral learning checks. These must be written by the student. Do not report H metrics until manually judged qrels have been entered.
-
-**Disclosure:** AI generated or edited code in `implementation.py` and the notebook scaffolding. The student must record what was modified and how it was verified before submission; do not claim that AI-generated text is personal analysis.
 
 ## Part H labeling rule
 
