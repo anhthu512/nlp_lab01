@@ -6,14 +6,7 @@ This folder contains the deliverables for W1 Parts D, E, F, G and H, using the c
 - prediction.md: prediction template to complete before running experiments, according to the assignment policy.
 - calculations.md: Part B hand-calculation worksheet; complete before Python verification.
 - reflection.md: Part I/J reflection and AI disclosure (maximum 500 words); detailed error analysis and Learning Check responses belong in the notebook or the instructor-designated location.
-The implementation uses lowercase tokens matching (?u)\\b\\w\\w+\\b, lexicographically sorted vocabulary, normalized TF (term count divided by the document's total token count, following W1 Section 4.2), smooth IDF log((1 + N) / (1 + df)) + 1, L2-normalized TF-IDF, and cosine similarity 0.0 whenever either vector is zero. It does not use TfidfVectorizer for the core functions. Part B calculations must use the unsmoothed formula explicitly given there, log(N / df).
-From the parent NLP directory on Windows:
-```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install numpy pandas scipy scikit-learn jupyterlab ipykernel
-.\.venv\Scripts\python.exe .\lab01\implementation.py
-.\.venv\Scripts\python.exe -m jupyter lab
-```
+
 Open lab01/experiments.ipynb, run all cells, and save the notebook so outputs are included. Enter and manually verify 5-10 relevance-labeled queries before expecting Part H metrics or a populated results.csv.
 The notebook resolves the corpus relative to the project, loads at most 30,000 non-empty JSONL text fields and creates stable IDs D00000, D00001, and so on. The three official preprocessing pipelines are compared on the same corpus and, after manual qrels are entered, on the same evaluation queries.
 Replace the empty qrels dictionary in the notebook with 5-10 queries and manually reviewed relevant document IDs. Do not derive labels automatically from query-term overlap. Once qrels are complete, rerun the notebook; it writes results.csv with retrieval rows and metrics.
